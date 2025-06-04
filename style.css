@@ -163,7 +163,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
   .touch-controls button {
@@ -172,4 +172,4 @@ button:hover {
   }
 
 }
-/* adicionar arquivos ao github pelo terminal git add  . */
+/* adicionar arquivos ao github pelo terminal git add . , git commit - m, git push */
