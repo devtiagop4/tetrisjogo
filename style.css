@@ -13,7 +13,7 @@ body {
   /* Garante que o body ocupe toda altura da tela */
   font-weight: bold;
   padding: 8px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 /* ==============================================
