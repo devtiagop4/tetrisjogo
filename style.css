@@ -1,0 +1,175 @@
+/* Estilos básicos do body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: yellow;
+
+  /* Flex para estruturar layout vertical */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Garante que o body ocupe toda altura da tela */
+
+  font-weight: bold;
+  padding: 8px;
+}
+
+/* Container principal que envolve conteúdo principal */
+.main-content {
+  flex: 1;
+  /* Ocupa todo o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container do jogo e painel de informações */
+.game-container {
+  display: flex;
+  flex-direction: row;
+  /* Canvas lado a lado no desktop */
+  flex-wrap: wrap;
+  /* Permite quebra se espaço apertar */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 100%;
+}
+
+/* Estilo comum para os canvas */
+canvas {
+  background-color: #000;
+  border: 2px solid #444;
+  height: auto;
+}
+
+/* Canvas principal do Tetris */
+#tetris {
+  width: 100%;
+  max-width: 240px;
+  /* Tamanho máximo fixo */
+}
+
+/* Canvas do próximo bloco */
+#next-piece {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Painel de informações ao lado do canvas */
+.info-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 140px;
+  padding: 10px;
+}
+
+/* Botões padrão */
+button {
+  padding: 6px 12px;
+  font-size: 16px;
+  border: none;
+  background-color: #444;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #665;
+}
+
+/* Texto de game over (inicialmente oculto) */
+.game-over {
+  display: none;
+  font-size: 24px;
+  color: red;
+  font-weight: bold;
+}
+
+
+
+/* Animação para flash na tela */
+@keyframes screen-flash {
+  0% {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.flash {
+  animation: screen-flash 0.2s ease-out;
+}
+
+/* Controles para mobile: ocultos por padrão */
+.touch-controls {
+  display: none;
+}
+
+/* Responsividade até 768px */
+@media screen and (max-width: 768px) {
+  .game-container {
+    flex-direction: row;
+    /* Canvas lado a lado no mobile */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #tetris,
+  #next-piece {
+    max-width: 45vw;
+    /* Usa 45% da largura da viewport */
+  }
+
+  .info-panel {
+    min-width: auto;
+    padding: 5px;
+  }
+}
+
+/* Responsividade para telas muito pequenas (até 480px) */
+@media screen and (max-width: 480px) {
+  .game-container {
+    flex-direction: row;
+    /* Canvas lado a lado */
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #tetris,
+  #next-piece {
+    max-width: 45vw;
+    /* Canvas ajustados para caber lado a lado */
+  }
+
+  .info-panel {
+    min-width: auto;
+    padding: 5px;
+  }
+
+  /* Mostra os controles móveis no mobile */
+  .touch-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .touch-controls button {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
+
+}
+/* adicionar arquivos ao github pelo terminal git add  . */
