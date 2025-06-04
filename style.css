@@ -13,7 +13,7 @@ body {
   /* Garante que o body ocupe toda altura da tela */
   font-weight: bold;
   padding: 8px;
-   overflow: hidden;
+  overflow: hidden;
 }
 
 /* ==============================================
@@ -30,7 +30,7 @@ body {
    Container do jogo e painel de informações
    ============================================== */
 .game-container {
-   display: flex;
+  display: flex;
   flex-direction: row;
   /* Canvas lado a lado no desktop */
   flex-wrap: wrap;
@@ -45,7 +45,7 @@ body {
    Estilo comum para os canvas
    =============================== */
 canvas {
- background-color: #000;
+  background-color: #000;
   border: 2px solid #444;
 }
 
@@ -131,7 +131,8 @@ button:hover {
    Controles para dispositivos móveis
    =============================== */
 .touch-controls {
-  display: none; /* Ocultos por padrão */
+  display: none;
+  /* Ocultos por padrão */
 }
 
 /* ===========================================
@@ -139,7 +140,7 @@ button:hover {
    =========================================== */
 @media screen and (max-width: 768px) {
   .game-container {
-      flex-direction: row;
+    flex-direction: row;
     /* Canvas lado a lado no mobile */
     flex-wrap: wrap;
     justify-content: center;
@@ -171,7 +172,7 @@ button:hover {
   #tetris,
   #next-piece {
     max-width: 45vw;
-    
+
     /* Canvas ajustados para caber lado a lado */
   }
 
@@ -186,7 +187,8 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 100px; /* Evita ficar grudado no final da tela */
+    margin-bottom: 100px;
+    /* Evita ficar grudado no final da tela */
   }
 
   .touch-controls button {
