@@ -190,12 +190,12 @@ function arenaSweep() {
 function updateColors(level) {
     // Cores diferentes por nível
     const colorThemes = [
-        [null, '#ccc', '#ccc', '#ccc', '#ccc', '#ccc', '#ccc', '#ccc'],
+        [null, '#ccc', '#cfa', '#cc3000', '#14c', '#ccc', '#ccc', '#ccc'],
         [null, '#f00', '#0f0', '#00f', '#ff0', '#0ff', '#f0f', '#fff'],
         [null, '#fa8072', '#90ee90', '#87ceeb', '#ffffe0', '#dda0dd', '#ffb6c1', '#add8e6'],
         [null, '#ff6347', '#3cb371', '#4682b4', '#ffd700', '#40e0d0', '#da70d6', '#e6e6fa'],
-        [null, '#f67', '#371', '#42b4', '#f00', '#0d0', '#da70', '#e6ea'],
-        [null, '#444', '#555', '#777', '#fff', '#def', '#d0d6', '#e6fa'],
+        [null, '#f67', '#371', '#42b4', '#f00', '#0d0', '#fa3', '#e6ea'],
+        [null, '#444', '#c21', '#777', '#fff', '#def', '#d0d6', '#e6fa'],
         [null, '#fff', '#3cb', '#468', '#ff5', '#40e', '#da7', '#e65678']
     ];
     colors = colorThemes[level % colorThemes.length];
