@@ -186,7 +186,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    padding-bottom: 100px; /* Evita ficar grudado no final da tela */
+    margin-bottom: 100px; /* Evita ficar grudado no final da tela */
   }
 
   .touch-controls button {
