@@ -148,12 +148,7 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
-canvas{
-  display: flex ;
-  align-items: center;
- justify-content: center;
 
-}
   #tetris,
   #next-piece {
     max-width: 45vw;
