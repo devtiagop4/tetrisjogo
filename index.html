@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tetris Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Conteúdo principal da página -->
+  <div class="main-content">
+    <!-- Container principal do jogo e painel de informações -->
+    <div class="game-container">
+      <!-- Canvas principal do Tetris -->
+      <canvas id="tetris" width="240" height="400"></canvas>
+
+      <!-- Painel lateral com próximo bloco, score, nível, etc -->
+      <div class="info-panel">
+        <canvas id="next-piece" width="50" height="80"></canvas>
+
+        <div>Score: <span id="score">0</span></div>
+        <div>Level: <span id="level">1</span></div>
+        <div>Record: <span id="record">0</span></div>
+
+        <button id="restart">Restart</button>
+        <button id="pause">Pause</button>
+
+        <div id="game-over" class="game-over">GAME OVER</div>
+      </div>
+    </div>
+
+    <!-- Controles para dispositivos móveis, inicialmente ocultos -->
+    <div class="touch-controls">
+      <!-- Botões para controlar o jogo via toque, ativados no mobile -->
+    </div>
+  </div>
+
+  <!-- Rodapé fixo no final da página -->
+
+
+  <script src="java.js"></script>
+</body>
+</html>
