@@ -1,6 +1,6 @@
 /* Estilos básicos do body */
 body {
-  margin: 0;
+  margin: 50px 0;
   font-family: Arial, sans-serif;
   background-color: #111;
   color: yellow;
@@ -13,6 +13,7 @@ body {
 
   font-weight: bold;
   padding: 8px;
+   overflow: hidden;
 }
 
 /* Container principal que envolve conteúdo principal */
@@ -41,12 +42,14 @@ body {
 canvas {
   background-color: #000;
   border: 2px solid #444;
-  height: auto;
+  height: 50%;
+
 }
 
 /* Canvas principal do Tetris */
 #tetris {
   width: 100%;
+  height: 50%;
   max-width: 240px;
   /* Tamanho máximo fixo */
 }
@@ -145,10 +148,16 @@ button:hover {
     flex-wrap: wrap;
     justify-content: center;
   }
-
+canvas{
+  display: flex ;
+  align-items: center;
+ justify-content: center;
+ margin-top: 70px;
+}
   #tetris,
   #next-piece {
     max-width: 45vw;
+
     /* Canvas ajustados para caber lado a lado */
   }
 
@@ -163,7 +172,7 @@ button:hover {
     flex-direction: row;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
   }
 
   .touch-controls button {
