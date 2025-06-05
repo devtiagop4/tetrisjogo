@@ -62,12 +62,14 @@ function createMatrix(w, h) {
 }
 
 function randomType() {
-    return 'TJLOSZI'[Math.floor(Math.random() * 7)];
+    return 'TJLOSZIAP'[Math.floor(Math.random() * 9)];
 }
 
 function createPiece(type) {
     const pieces = {
         T: [[0, 0, 0], [1, 1, 1], [0, 1, 0]],
+        A: [[2], [2]],
+        P: [[2]],
         O: [[2, 2], [2, 2]],
         L: [[0, 3, 0], [0, 3, 0], [0, 3, 3]],
         J: [[0, 4, 0], [0, 4, 0], [4, 4, 0]],
@@ -190,13 +192,13 @@ function arenaSweep() {
 function updateColors(level) {
     // Cores diferentes por nível
     const colorThemes = [
-        [null, '#ccc', '#cfa', '#cc3000', '#14c', '#ccc', '#ccc', '#ccc'],
-        [null, '#f00', '#0f0', '#00f', '#ff0', '#0ff', '#f0f', '#fff'],
-        [null, '#fa8072', '#90ee90', '#87ceeb', '#ffffe0', '#dda0dd', '#ffb6c1', '#add8e6'],
-        [null, '#ff6347', '#3cb371', '#4682b4', '#ffd700', '#40e0d0', '#da70d6', '#e6e6fa'],
-        [null, '#f67', '#371', '#42b4', '#f00', '#0d0', '#fa3', '#e6ea'],
-        [null, '#444', '#c21', '#777', '#fff', '#def', '#d0d6', '#e6fa'],
-        [null, '#fff', '#3cb', '#468', '#ff5', '#40e', '#da7', '#e65678']
+        [null, '#ccc', '#cfa', '#cc3000', '#14c', '#ccc', '#ccc', '#ccc', '#3cb371', '#0ff'],
+        [null, '#f00', '#0f0', '#00f', '#ff0', '#0ff', '#f0f', '#fff', '#468', '#350'],
+        [null, '#fa8072', '#90ee90', '#87ceeb', '#ffffe0', '#dda0dd', '#ffb6c1', '#add8e6', '#c25', '#a528'],
+        [null, '#ff6347', '#3cb371', '#4682b4', '#ffd700', '#40e0d0', '#da70d6', '#e6e6fa', '#fac', '#123456'],
+        [null, '#f67', '#371', '#42b4', '#f00', '#0d0', '#fa3', '#e6ea', '#ccf145', '#afc'],
+        [null, '#444', '#c21', '#777', '#fff', '#def', '#d0d6', '#e6fa', '#769', '#908'],
+        [null, '#fff', '#3cb', '#468', '#ff5', '#40e', '#da7', '#e65678', '#190', '#aa3']
     ];
     colors = colorThemes[level % colorThemes.length];
 }
